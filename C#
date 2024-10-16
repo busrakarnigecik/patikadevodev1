@@ -1,0 +1,101 @@
+//Ödev 1
+
+Console.WriteLine("Lütfen pozitif bir sayı girin (n):");
+int n = Convert.ToInt32(Console.ReadLine().Trim());
+List<int> sayilar = new List<int>();
+
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine($"{i + 1}. pozitif sayıyı girin:");
+            int sayi;
+
+while (true)
+            {
+                sayi = Convert.ToInt32(Console.ReadLine().Trim());
+
+                if (sayi > 0)
+                {
+                    sayilar.Add(sayi);
+                    break; // Geçerli bir sayı alındı, döngüden çık
+                }
+                else
+                {
+                    Console.WriteLine("Lütfen pozitif bir sayı girin.");
+                }
+            }
+        }
+
+        Console.WriteLine("Çift sayılar:");
+        foreach (var s in sayilar)
+        {
+            if (s % 2 == 0) 
+            {
+                Console.WriteLine(s);
+            }
+        }
+
+// Ödev 2
+
+Console.WriteLine("Lütfen pozitif bir sayı girin (n):");
+int n = Convert.ToInt32(Console.ReadLine().Trim());
+
+    Console.WriteLine("Lütfen ikinci bir pozitif sayı girin (m):");
+     int m = Convert.ToInt32(Console.ReadLine().Trim());
+
+    Console.WriteLine($"Girdiğiniz sayılar: n = {n}, m = {m}");
+    List<int> sayilar = new List<int>();
+
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine($"{i + 1}. pozitif sayıyı girin:");
+            int sayi;
+while (true)
+            {
+                sayi = Convert.ToInt32(Console.ReadLine().Trim());
+
+                if (sayi > 0)
+                {
+                    sayilar.Add(sayi);
+                    break; // Geçerli bir sayı alındı, döngüden çık
+                }
+                else
+                {
+                    Console.WriteLine("Lütfen pozitif bir sayı girin.");
+                }
+            }
+        }
+        Console.WriteLine("m'e tam bölünebilen sayılar:");
+        foreach (var s in sayilar)
+        {
+            if (s % m == 0) 
+            {
+                Console.WriteLine(s);
+            }
+        }
+
+//Ödev 3
+
+Console.WriteLine("Lütfen pozitif bir sayı girin (n):");
+int n = Convert.ToInt32(Console.ReadLine().Trim());
+List<string> kelimeler = new List<string>();
+
+        for (int i = 0; i < n; i++)
+        {
+            Console.WriteLine($"{i + 1}. kelimeyi girin:");
+            string kelime = Console.ReadLine().Trim();
+            kelimeler.Add(kelime);
+        }
+        Console.WriteLine("Kelimeler (sondan başa doğru):");
+        for (int i = kelimeler.Count - 1; i >= 0; i--)
+        {
+            Console.WriteLine(kelimeler[i]);
+        }
+
+// Ödev 4
+
+string str = Console.ReadLine();
+
+char[] arr = str.ToArray();
+
+Console.WriteLine("Karakter: " + arr.Length);
+Console.WriteLine("Kelime: " + str.Split(' ').ToArray().Length);
